@@ -9,9 +9,6 @@ EnjoyHint
 
 EnjoyHint is free software distributed under the terms of MIT license.
 
-#### Demo
-* [A guide on EnjoyHint](http://darron1217.github.io/enjoyhint.js/docs/index.html)
-
 #### Dependencies
 EnjoyHint require the following plugins and libs:
 

@@ -1,24 +1,19 @@
 module.exports = function(grunt){
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: grunt.file.readJSON('bower.json'),
         concat:{
             options: {
                 separator: ';'
             },
             dist:{
-                src:['src/*.js', 'node_modules/kinetic/kinetic.min.js', 'node_modules/jquery.scrollTo/jquery.scrollTo.min.js'],
-                dest: 'dist/enjoyhint.js'
-            },
-            all: {
-              src: ['node_modules/jquery/dist/jquery.min.js', 'dist/enjoyhint.js'],
-              dest: 'dist/all.js',
-            },
+                src:['src/*.js', 'lib/kineticjs/kinetic.min.js', 'lib/jquery.scrollTo/jquery.scrollTo.min.js'],
+                dest: '<%= pkg.name %>.js'
+            }
         },
         uglify: {
             main: {
                 files: {
-                    'dist/enjoyhint.min.js': ['<%= concat.dist.dest %>'],
-                    'dist/all.min.js': ['<%= concat.all.dest %>']
+                    '<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
                 }
             }
         },
@@ -36,7 +31,7 @@ module.exports = function(grunt){
         cssmin: {
             combine: {
                 files: {
-                    'dist/enjoyhint.css': ['src/jquery.enjoyhint.css']
+                    'enjoyhint.css': ['src/jquery.enjoyhint.css']
                 }
             }
         }
