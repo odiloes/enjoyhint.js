@@ -1,5 +1,5 @@
 {
-  "name": "enjoyhint",
+  "name": "odilo-enjoyhint",
   "version": "1.0.0",
   "description": "Web-tool that provides the simplest way to create interactive tutorials and hints.",
   "main": "enjoyhint.js",
